@@ -270,7 +270,8 @@ img { max-width: 100%; display: block; }
 
 /* ============ pillars: split panels, text on one side, the product on the other ============ */
 .pillars { display: grid; gap: clamp(20px, 3vw, 32px); }
-.pillar { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); min-height: 580px; overflow: hidden; }
+.wrap--wide { max-width: 1600px; }
+.pillar { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); min-height: clamp(580px, 38vw, 720px); overflow: hidden; }
 .pillar.flip { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
 .pillar.flip .p-text { order: 2; }
 .p-text { padding: clamp(28px, 3.6vw, 52px); display: flex; flex-direction: column; justify-content: center; gap: 18px; min-width: 0; }
@@ -473,7 +474,7 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(40px + env(
 
 <!-- ============ pillars ============ -->
 <section class="sec" id="pillars" style="padding-top:0">
-  <div class="wrap">
+  <div class="wrap wrap--wide">
     <div class="sec-head rv">
       <span class="eyebrow">Five pillars</span>
       <h2>What sets Masscode apart.</h2>
